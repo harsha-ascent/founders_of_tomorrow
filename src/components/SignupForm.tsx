@@ -30,7 +30,8 @@ export default function SignupForm() {
 
     const payload = {
       parent_name: String(data.get("parent_name") ?? "").trim(),
-      parent_contact: String(data.get("parent_contact") ?? "").trim(),
+      parent_phone: String(data.get("parent_phone") ?? "").trim(),
+      parent_email: String(data.get("parent_email") ?? "").trim(),
       kid_name: String(data.get("kid_name") ?? "").trim(),
       kid_school: String(data.get("kid_school") ?? "").trim(),
       kid_age: kidAgeRaw ? Number(kidAgeRaw) : null,
@@ -44,7 +45,7 @@ export default function SignupForm() {
       setStatus("error");
       setErrorMsg(
         error.code === "23505"
-          ? "Looks like you've already registered with this contact."
+          ? "You've already registered these exact details — you're on the list!"
           : "Something went wrong. Please try again."
       );
       return;
@@ -57,11 +58,19 @@ export default function SignupForm() {
   if (status === "success") {
     return (
       <div className="rounded-lg border border-gold/40 bg-gold/10 p-8 text-center">
-        <p className="eyebrow text-xs text-gold">You&apos;re on the list</p>
+        <p className="eyebrow text-xs text-gold">Thank you, you&apos;re on the list</p>
         <p className="mt-3 text-lg text-paper">
-          We&apos;ll reach out the moment Fall 2026 applications open.
-          Early registrants get priority review.
+          Our team will reach out to you soon — we&apos;ll notify you once
+          Fall 2026 applications are open. Early registrants get priority
+          review.
         </p>
+        <button
+          type="button"
+          onClick={() => setStatus("idle")}
+          className="eyebrow mt-6 text-xs text-gold underline-offset-4 hover:underline"
+        >
+          Register another kid
+        </button>
       </div>
     );
   }
@@ -84,19 +93,33 @@ export default function SignupForm() {
           />
         </div>
         <div>
-          <label htmlFor="parent_contact" className="mb-1.5 block text-sm text-muted">
-            Parent contact (phone or email)
+          <label htmlFor="parent_phone" className="mb-1.5 block text-sm text-muted">
+            Parent phone number
           </label>
           <input
-            id="parent_contact"
-            name="parent_contact"
-            type="text"
+            id="parent_phone"
+            name="parent_phone"
+            type="tel"
             required
             autoComplete="tel"
             placeholder="e.g. 98765 43210"
             className={inputClass}
           />
         </div>
+      </div>
+
+      <div>
+        <label htmlFor="parent_email" className="mb-1.5 block text-sm text-muted">
+          Parent email <span className="text-muted/70">(optional)</span>
+        </label>
+        <input
+          id="parent_email"
+          name="parent_email"
+          type="email"
+          autoComplete="email"
+          placeholder="e.g. priya@example.com"
+          className={inputClass}
+        />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -156,7 +179,9 @@ export default function SignupForm() {
         {status === "submitting" ? "Registering..." : "Notify me when it opens"}
       </button>
       <p className="text-xs text-muted">
-        Early registrants get priority access when Fall 2026 applications open.
+        Got more than one kid? Submit this form again for each child —
+        early registrants get priority access when Fall 2026 applications
+        open.
       </p>
     </form>
   );
