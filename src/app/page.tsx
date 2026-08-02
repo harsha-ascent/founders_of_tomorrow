@@ -53,8 +53,7 @@ export default function Home() {
       >
         <div className="grid-fade absolute inset-0 opacity-60" />
         <div className="relative mx-auto max-w-2xl">
-          <p className="eyebrow text-xs text-gold">Next step</p>
-          <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">
             Be first to know when applications open.
           </h2>
           <p className="mt-4 text-paper/70">
