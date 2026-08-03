@@ -7,7 +7,7 @@ export default function Home() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <span className="eyebrow text-sm text-paper">
-            FOUNDERS <span className="text-gold">OF TOMORROW</span>
+            BUILDERS <span className="text-gold">OF TOMORROW</span>
           </span>
           <a
             href="#register"
@@ -24,10 +24,10 @@ export default function Home() {
         <div className="glow absolute left-1/2 top-1/3 h-[420px] w-[420px] -translate-x-1/2" />
         <div className="relative mx-auto w-full max-w-6xl px-6 pt-24">
           <p className="eyebrow text-xs text-gold">
-            Founders of Tomorrow / T-Works / Fall 2026
+            Builders of Tomorrow / T-Works / Fall 2026
           </p>
           <h1 className="mt-6 text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
-            FOUNDERS
+            BUILDERS
             <br />
             OF TOMORROW
           </h1>
@@ -71,7 +71,7 @@ export default function Home() {
       <footer className="bg-ink px-6 py-10 text-paper/50">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 sm:flex-row">
           <p className="eyebrow text-xs">
-            Founders of Tomorrow <span className="text-gold">×</span> T-Works
+            Builders of Tomorrow <span className="text-gold">×</span> T-Works
           </p>
           <p className="text-xs">Hyderabad, India</p>
         </div>

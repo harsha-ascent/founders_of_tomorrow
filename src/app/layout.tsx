@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Founders of Tomorrow — T-Works",
+  title: "Builders of Tomorrow — T-Works",
   description:
     "An elite, acceptance-only fellowship at T-Works that makes students entrepreneurship-ready. Register your interest for the Fall 2026 founding cohort.",
   openGraph: {
-    title: "Founders of Tomorrow — T-Works",
+    title: "Builders of Tomorrow — T-Works",
     description:
       "A 12-week fellowship where students build a real product on industrial machines and sell it to real customers. Register your interest.",
     type: "website",

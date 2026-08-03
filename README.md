@@ -1,6 +1,6 @@
-# Founders of Tomorrow — sneak peek site
+# Builders of Tomorrow — sneak peek site
 
-Single-page teaser + interest-registration form for the Founders of
+Single-page teaser + interest-registration form for the Builders of
 Tomorrow fellowship (T-Works). Built with Next.js (App Router) + Tailwind
 CSS, storing signups in Supabase Postgres.
 
